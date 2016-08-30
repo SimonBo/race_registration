@@ -1,1 +1,19 @@
 pl:
+  activerecord:
+    models:
+      registration: Zgłoszenie
+    attributes:
+      registration:
+        name: Imię i nazwisko
+        age: Wiek
+        phone_number: Telefon kontaktowy
+        email: Adres mailowy
+        address: Adres zamieszkania
+        team_1_name: Imię i nazwisko
+        team_1_age: Wiek
+        team_2_name: Imię i nazwisko
+        team_2_age: Wiek
+        team_3_name: Imię i nazwisko
+        team_3_age: Wiek
+        team_4_name: Imię i nazwisko
+        team_4_age: Wiek

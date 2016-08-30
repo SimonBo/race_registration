@@ -1,0 +1,31 @@
+= simple_form_for @registration, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+  .row
+    .col-xs-offset-2.col-xs-8.text-center
+      = f.error_notification
+
+      .form-inputs
+        = f.input :name
+        = f.input :age
+        = f.input :phone_number
+        = f.input :email
+        = f.input :address
+        = f.input :team_1_name
+        = f.input :team_1_age
+        = f.input :team_2_name
+        = f.input :team_2_age
+        = f.input :team_3_name
+        = f.input :team_3_age
+        = f.input :team_4_name
+        = f.input :team_4_age
+  .row
+    .col-xs-12
+      h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
+      ol
+        li zapoznaliśmy się z Regulaminem Rajdu i zobowiązujemy się go przestrzegać;
+        li stan zdrowia pozwala nam na uczestnictwo w Rajdzie w dniu 2 października 2016 r.;
+        li posiadamy niezbędną wiedzę i umiejętności poruszania się po drogach;
+        li wyrażamy zgodę na wykorzystanie i przetwarzanie naszych danych osobowych oraz naszego wizerunku w związku z organizacją Rajdu, zgodnie z ustawą z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (tekst jednolity Dz. U. z 2016 r., poz. 922);
+        li ponosimy całkowitą odpowiedzialność za bezpieczeństwo niepełnoletnich członków zespołu w trakcie trwania Rajdu w dniu 2 października 2016 r.
+
+    .text-center
+      = f.button :submit, 'Wyślij zgłoszenie'

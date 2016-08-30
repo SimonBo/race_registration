@@ -1,0 +1,2 @@
+json.extract! registration, :id, :name, :age, :phone_number, :email, :address, :team_1_name, :team_1_age, :team_2_name, :team_2_age, :team_3_name, :team_3_age, :team_4_name, :team_5_age, :token, :created_at, :updated_at
+json.url registration_url(registration, format: :json)

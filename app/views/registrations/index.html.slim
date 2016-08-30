@@ -1,0 +1,47 @@
+h1 Listing registrations
+
+table
+  thead
+    tr
+      th Name
+      th Age
+      th Phone number
+      th Email
+      th Address
+      th Team 1 name
+      th Team 1 age
+      th Team 2 name
+      th Team 2 age
+      th Team 3 name
+      th Team 3 age
+      th Team 4 name
+      th Team 5 age
+      th Token
+      th
+      th
+      th
+
+  tbody
+    - @registrations.each do |registration|
+      tr
+        td = registration.name
+        td = registration.age
+        td = registration.phone_number
+        td = registration.email
+        td = registration.address
+        td = registration.team_1_name
+        td = registration.team_1_age
+        td = registration.team_2_name
+        td = registration.team_2_age
+        td = registration.team_3_name
+        td = registration.team_3_age
+        td = registration.team_4_name
+        td = registration.team_5_age
+        td = registration.token
+        td = link_to 'Show', registration
+        td = link_to 'Edit', edit_registration_path(registration)
+        td = link_to 'Destroy', registration, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Registration', new_registration_path

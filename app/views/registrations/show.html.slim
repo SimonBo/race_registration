@@ -1,0 +1,48 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @registration.name
+p
+  strong Age:
+  = @registration.age
+p
+  strong Phone number:
+  = @registration.phone_number
+p
+  strong Email:
+  = @registration.email
+p
+  strong Address:
+  = @registration.address
+p
+  strong Team 1 name:
+  = @registration.team_1_name
+p
+  strong Team 1 age:
+  = @registration.team_1_age
+p
+  strong Team 2 name:
+  = @registration.team_2_name
+p
+  strong Team 2 age:
+  = @registration.team_2_age
+p
+  strong Team 3 name:
+  = @registration.team_3_name
+p
+  strong Team 3 age:
+  = @registration.team_3_age
+p
+  strong Team 4 name:
+  = @registration.team_4_name
+p
+  strong Team 5 age:
+  = @registration.team_5_age
+p
+  strong Token:
+  = @registration.token
+
+= link_to 'Edit', edit_registration_path(@registration)
+'|
+= link_to 'Back', registrations_path
