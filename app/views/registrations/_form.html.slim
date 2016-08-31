@@ -1,23 +1,21 @@
 = simple_form_for @registration, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
-  .row
-    .col-xs-offset-2.col-xs-8.text-center
-      = f.error_notification
+  / = f.error_notification
 
-      .form-inputs
-        = f.input :team_name
-        = f.input :name
-        = f.input :age
-        = f.input :phone_number
-        = f.input :email
-        = f.input :address
-        = f.input :team_1_name
-        = f.input :team_1_age
-        = f.input :team_2_name
-        = f.input :team_2_age
-        = f.input :team_3_name
-        = f.input :team_3_age
-        = f.input :team_4_name
-        = f.input :team_4_age
+  .form-inputs
+    = f.input :team_name
+    = f.input :name
+    = f.input :age
+    = f.input :phone_number
+    = f.input :email
+    = f.input :address
+    = f.input :team_1_name
+    = f.input :team_1_age
+    = f.input :team_2_name
+    = f.input :team_2_age
+    = f.input :team_3_name
+    = f.input :team_3_age
+    = f.input :team_4_name
+    = f.input :team_4_age
   .row
     .col-xs-12
       h4 2. W imieniu wszystkich członków zespołu oświadczam, że:

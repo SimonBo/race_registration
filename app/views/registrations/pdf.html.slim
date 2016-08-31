@@ -1,0 +1,77 @@
+.container-fluid
+  .row
+    .text-center
+      h3 Zgłoszenie uczestnictwa
+      h3 w IV Rajdzie Rowerowym na Orientację pn. „Na jesiennym szlaku”
+      h3 w dniu 2 października 2016 roku w Sulejówku
+    h4 1. Zgłaszam udział zespołu w IV Rajdzie Rowerowym na Orientację „Na jesiennym szlaku” w dniu 2 października 2016 roku w Sulejówku:
+  .row
+    .col-xs-offset-2.col-xs-8.text-center
+      p
+       b #{ t('activerecord.attributes.registration.team_name') }:
+       |  #{ @registration.team_name }
+      p
+       b #{ t('activerecord.attributes.registration.name') }:
+       |  #{ @registration.name }
+      p
+       b #{ t('activerecord.attributes.registration.age') }:
+       |  #{ @registration.age }
+      p
+       b #{ t('activerecord.attributes.registration.phone_number') }:
+       |  #{ @registration.phone_number }
+      p
+       b #{ t('activerecord.attributes.registration.email') }:
+       |  #{ @registration.email }
+      p
+       b #{ t('activerecord.attributes.registration.address') }:
+       |  #{ @registration.address }
+       - if @registration.team_1_name.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_1_name') }:
+         |  #{ @registration.team_1_name }
+         - if @registration.team_1_age.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_1_age') }:
+         |  #{ @registration.team_1_age }
+         - if @registration.team_2_name.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_2_name') }:
+         |  #{ @registration.team_2_name }
+         - if @registration.team_2_age.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_2_age') }:
+         |  #{ @registration.team_2_age }
+         - if @registration.team_3_name.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_3_name') }:
+         |  #{ @registration.team_3_name }
+         - if @registration.team_3_age.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_3_age') }:
+         |  #{ @registration.team_3_age }
+         - if @registration.team_4_name.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_4_name') }:
+         |  #{ @registration.team_4_name }
+         - if @registration.team_4_age.present?
+        p
+         b #{ t('activerecord.attributes.registration.team_4_age') }:
+         |  #{ @registration.team_4_age }
+  .row
+    .col-xs-12
+      h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
+      ol
+        li zapoznaliśmy się z Regulaminem Rajdu i zobowiązujemy się go przestrzegać;
+        li stan zdrowia pozwala nam na uczestnictwo w Rajdzie w dniu 2 października 2016 r.;
+        li posiadamy niezbędną wiedzę i umiejętności poruszania się po drogach;
+        li wyrażamy zgodę na wykorzystanie i przetwarzanie naszych danych osobowych oraz naszego wizerunku w związku z organizacją Rajdu, zgodnie z ustawą z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (tekst jednolity Dz. U. z 2016 r., poz. 922);
+        li ponosimy całkowitą odpowiedzialność za bezpieczeństwo niepełnoletnich członków zespołu w trakcie trwania Rajdu w dniu 2 października 2016 r.
+  .row
+    .col-xs-4.col-xs-offset-2
+      | _________________________
+      br
+      span style='margin-left: 60px;' data
+    .col-xs-4.col-xs-offset-2
+      | _________________________
+      br
+      | podpis Kapitana Zespołu

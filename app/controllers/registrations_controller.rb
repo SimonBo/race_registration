@@ -1,5 +1,5 @@
 class RegistrationsController < ApplicationController
-  before_action :set_registration, only: [:show, :edit, :update, :destroy]
+  before_action :set_registration, only: [:show, :edit, :update, :destroy, :pdf]
 
   # GET /registrations
   # GET /registrations.json
@@ -10,6 +10,17 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1
   # GET /registrations/1.json
   def show
+    respond_to do |f|
+      f.html
+      f.pdf do
+        html = render_to_string(:action => "pdf.html.slim")
+        kit = PDFKit.new(html)
+        send_data(kit.to_pdf, :filename => "zgloszenie.pdf", :type => 'application/pdf', :disposition => 'attachment')
+      end
+    end
+  end
+
+  def pdf
   end
 
   # GET /registrations/new
@@ -28,7 +39,7 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration, notice: 'Zgłoszenie zostało przyjęte.' }
+        format.html { redirect_to @registration }
         format.json { render :show, status: :created, location: @registration }
       else
         format.html { render :new }
@@ -64,7 +75,7 @@ class RegistrationsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_registration
-      @registration = Registration.find(params[:id])
+      @registration = Registration.find_by_token(params[:token])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -73,4 +84,4 @@ class RegistrationsController < ApplicationController
         :address, :team_1_name, :team_1_age, :team_2_name, :team_2_age,
         :team_3_name, :team_3_age, :team_4_name, :team_4_age, :token, :team_name)
     end
-end
+  end
