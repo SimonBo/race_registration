@@ -50,3 +50,6 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'

@@ -28,7 +28,7 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration, notice: 'Registration was successfully created.' }
+        format.html { redirect_to @registration, notice: 'Zgłoszenie zostało przyjęte.' }
         format.json { render :show, status: :created, location: @registration }
       else
         format.html { render :new }
@@ -69,6 +69,8 @@ class RegistrationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registration_params
-      params.require(:registration).permit(:name, :age, :phone_number, :email, :address, :team_1_name, :team_1_age, :team_2_name, :team_2_age, :team_3_name, :team_3_age, :team_4_name, :team_4_age, :token, :team_name)
+      params.require(:registration).permit(:name, :age, :phone_number, :email,
+        :address, :team_1_name, :team_1_age, :team_2_name, :team_2_age,
+        :team_3_name, :team_3_age, :team_4_name, :team_4_age, :token, :team_name)
     end
 end

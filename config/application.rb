@@ -1,4 +1,5 @@
 require_relative 'boot'
+require 'pdfkit'
 
 require 'rails/all'
 
@@ -8,7 +9,7 @@ Bundler.require(*Rails.groups)
 
 module RaceRegistration
   class Application < Rails::Application
-
+    config.middleware.use PDFKit::Middleware
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
