@@ -39,7 +39,7 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration }
+        format.html { redirect_to registration_path(@registration.token) }
         format.json { render :show, status: :created, location: @registration }
       else
         format.html { render :new }
