@@ -4,24 +4,6 @@ GIT
   specs:
     remotipart (1.2.1)
 
-GIT
-  remote: git://github.com/sferik/rails_admin.git
-  revision: f919c03ebce91f38896db718476e323a822869a9
-  specs:
-    rails_admin (1.0.0.rc)
-      builder (~> 3.1)
-      coffee-rails (~> 4.0)
-      font-awesome-rails (>= 3.0, < 5)
-      haml (~> 4.0)
-      jquery-rails (>= 3.0, < 5)
-      jquery-ui-rails (~> 5.0)
-      kaminari (~> 0.14)
-      nested_form (~> 0.3)
-      rack-pjax (>= 0.7)
-      rails (>= 4.0, < 6)
-      remotipart (~> 1.0)
-      sass-rails (>= 4.0, < 6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,6 +196,19 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_admin (1.0.0.rc)
+      builder (~> 3.1)
+      coffee-rails (~> 4.0)
+      font-awesome-rails (>= 3.0, < 5)
+      haml (~> 4.0)
+      jquery-rails (>= 3.0, < 5)
+      jquery-ui-rails (~> 5.0)
+      kaminari (~> 0.14)
+      nested_form (~> 0.3)
+      rack-pjax (>= 0.7)
+      rails (>= 4.0, < 6)
+      remotipart (~> 1.0)
+      sass-rails (>= 4.0, < 6)
     rails_layout (1.0.29)
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
@@ -338,7 +333,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails_12factor
-  rails_admin!
+  rails_admin (>= 1.0.0.rc)
   rails_layout
   rb-fchange
   rb-fsevent

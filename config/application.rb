@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 
 module RaceRegistration
   class Application < Rails::Application
+    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
+
     config.middleware.use PDFKit::Middleware
     config.generators do |g|
       g.test_framework :rspec,
