@@ -1,7 +1,41 @@
 form#new_registration {
+  label {
+    font-weight: 500;
+    text-align: left;
+    display: inline;
+  }
+  p {
+    margin: 5px 0 0 0;
+  }
   padding: 10px 0;
   display:inline-block;
   input {
    max-width: 300px;
  }
+}
+
+.form_box {
+  border: 1px black solid;
+  padding: 10px;
+  text-align: left;
+}
+
+.declaration {
+  p {
+    margin-left: 20px !important;
+  }
+}
+
+.captain_details, .team_details {
+  margin-top: 10px;
+}
+
+#error_messages_box {
+  /*color: red;*/
+  padding: 5px;
+  p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px !important;
+  }
 }

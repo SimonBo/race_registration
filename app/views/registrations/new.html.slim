@@ -1,9 +1,38 @@
-.container-fluid
+.container-fluid.new_registration
+  = render 'reg_title'
+= simple_form_for @registration, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+  - if @registration.errors.any?
+    #error_messages_box.bg-danger
+      ol
+        p Uzupełnij następujące pola:
+        - @registration.errors.full_messages.each do |msg|
+          li = msg
+  h4 1. Zgłaszam udział zespołu pn. #{ f.input_field :team_name } w IV Rajdzie Rowerowym na Orientację „Na jesiennym szlaku” w dniu 2 października 2016 roku w Sulejówku:
+  .form_box.col-sm-8.col-sm-offset-2
+    b 1. Kapitan zespołu:
+    .captain_details
+      = f.input :name
+      = f.input :age
+      = f.input :phone_number
+      = f.input :email
+      = f.input :address
+      br
+    b style='padding: 10px 0;' Członkowie zespołu:
+    .team_details
+      p 2. Imię i nazwisko: #{ f.input_field :team_1_name }, wiek: #{ f.input_field :team_1_age }
+      p 3. Imię i nazwisko: #{ f.input_field :team_2_name }, wiek: #{ f.input_field :team_2_age }
+      p 4. Imię i nazwisko: #{ f.input_field :team_3_name }, wiek: #{ f.input_field :team_3_age }
+      p 5. Imię i nazwisko: #{ f.input_field :team_4_name }, wiek: #{ f.input_field :team_4_age }
+
   .row
-    .text-center
-      h3 Zgłoszenie uczestnictwa
-      h3 w IV Rajdzie Rowerowym na Orientację pn. „Na jesiennym szlaku”
-      h3 w dniu 2 października 2016 roku w Sulejówku
-    h4 1. Zgłaszam udział zespołu w IV Rajdzie Rowerowym na Orientację „Na jesiennym szlaku” w dniu 2 października 2016 roku w Sulejówku:
-  .row
-      = render 'form'
+    .col-xs-12.declaration
+      h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
+
+      p 1)    zapoznaliśmy się z Regulaminem Rajdu i zobowiązujemy się go przestrzegać;
+      p 2)    stan zdrowia pozwala nam na uczestnictwo w Rajdzie w dniu 2 października 2016 r.;
+      p 3)    posiadamy niezbędną wiedzę i umiejętności poruszania się po drogach;
+      p 4)    wyrażamy zgodę na wykorzystanie i przetwarzanie naszych danych osobowych oraz naszego wizerunku w związku z organizacją Rajdu, zgodnie z ustawą z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (tekst jednolity Dz. U. z 2016 r., poz. 922);
+      p 5)    ponosimy całkowitą odpowiedzialność za bezpieczeństwo niepełnoletnich członków zespołu w trakcie trwania Rajdu w dniu 2 października 2016 r.
+  br
+  .text-center
+    = f.button :submit, 'Wyślij zgłoszenie'
