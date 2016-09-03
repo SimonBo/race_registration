@@ -14,21 +14,13 @@
       b style='padding: 10px 0;' Członkowie zespołu:
       .team_details
         - if @registration.team_1_name.present?
-          p #{ t('activerecord.attributes.registration.team_1_name') }: #{ @registration.team_1_name }
-        - if @registration.team_1_age.present?
-          p #{ t('activerecord.attributes.registration.team_1_age') }: #{ @registration.team_1_age }
+          p #{ t('activerecord.attributes.registration.team_1_name') } #{ @registration.team_1_name }, #{ t('activerecord.attributes.registration.team_1_age') } #{ @registration.team_1_age }
         - if @registration.team_2_name.present?
-          p #{ t('activerecord.attributes.registration.team_2_name') }: #{ @registration.team_2_name }
-        - if @registration.team_2_age.present?
-          p #{ t('activerecord.attributes.registration.team_2_age') }: #{ @registration.team_2_age }
+          p #{ t('activerecord.attributes.registration.team_2_name') } #{ @registration.team_2_name }, #{ t('activerecord.attributes.registration.team_2_age') } #{ @registration.team_2_age }
         - if @registration.team_3_name.present?
-          p #{ t('activerecord.attributes.registration.team_3_name') }: #{ @registration.team_3_name }
-        - if @registration.team_3_age.present?
-          p #{ t('activerecord.attributes.registration.team_3_age') }: #{ @registration.team_3_age }
+          p #{ t('activerecord.attributes.registration.team_3_name') } #{ @registration.team_3_name }, #{ t('activerecord.attributes.registration.team_3_age') } #{ @registration.team_3_age }
         - if @registration.team_4_name.present?
-          p #{ t('activerecord.attributes.registration.team_4_name') }: #{ @registration.team_4_name }
-        - if @registration.team_4_age.present?
-          p #{ t('activerecord.attributes.registration.team_4_age') }: #{ @registration.team_4_age }
+          p #{ t('activerecord.attributes.registration.team_4_name') } #{ @registration.team_4_name }, #{ t('activerecord.attributes.registration.team_4_age') } #{ @registration.team_4_age }
   .row
     .col-xs-12
       h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
