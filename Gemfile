@@ -54,4 +54,5 @@ end
 gem 'pdfkit'
 gem 'wkhtmltopdf-binary'
 gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.0.0.rc'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
