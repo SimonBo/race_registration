@@ -19,7 +19,7 @@ end
 
 member_action :pdf do
   @registration = resource
-  html = render_to_string(:action => "pdf.html.slim")
+  html = render_to_string(:action => "pdf.html.slim", layout: 'application.html.slim')
   kit = PDFKit.new(html)
   send_data(kit.to_pdf, :filename => "zgloszenie.pdf", :type => 'application/pdf', :disposition => 'attachment')
 end
