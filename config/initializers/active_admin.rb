@@ -1,3 +1,7 @@
+class ActiveAdmin::BaseController
+  http_basic_authenticate_with :name =>  ENV["aa_login"], :password =>  ENV["aa_pass"]
+end
+
 ActiveAdmin.setup do |config|
   # == Site Title
   #
