@@ -1,5 +1,4 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
 
 set :application, 'race_registration'
 set :repo_url, 'git@github.com:SimonBo/race_registration.git'
