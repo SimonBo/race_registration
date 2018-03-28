@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
-ruby '2.3.0'
-gem 'rails', '~> 5.0.0'
+ruby '2.5.0'
+gem 'rails', '~> 5.1.4'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -56,3 +56,8 @@ gem 'wkhtmltopdf-binary'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
