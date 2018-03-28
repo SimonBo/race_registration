@@ -57,7 +57,7 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
-gem 'capistrano', '~> 3.1.0'
+gem 'capistrano', '~> 3.8.1'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
