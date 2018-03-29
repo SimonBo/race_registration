@@ -82,6 +82,6 @@ class RegistrationsController < ApplicationController
     def registration_params
       params.require(:registration).permit(:name, :age, :phone_number, :email,
         :address, :team_1_name, :team_1_age, :team_2_name, :team_2_age,
-        :team_3_name, :team_3_age, :team_4_name, :team_4_age, :token, :team_name)
+        :team_3_name, :team_3_age, :team_4_name, :team_4_age, :token, :team_name, :team_5_name, :team_6_name, :team_7_name, :team_5_age, :team_6_age, :team_7_age)
     end
   end

@@ -9,7 +9,7 @@ pl:
         age: "Wiek:"
         phone_number: "Telefon kontaktowy:"
         email: "Adres mailowy:"
-        address: "Adres zamieszkania:"
+        address: "Adres zamieszkania (kod pocztowy i miejscowość):"
         team_1_name: "Imię i nazwisko:"
         team_1_age: "Wiek:"
         team_2_name: "Imię i nazwisko:"
@@ -18,6 +18,12 @@ pl:
         team_3_age: "Wiek:"
         team_4_name: "Imię i nazwisko:"
         team_4_age: "Wiek:"
+        team_5_name: "Imię i nazwisko:"
+        team_5_age: "Wiek:"
+        team_6_name: "Imię i nazwisko:"
+        team_6_age: "Wiek:"
+        team_7_name: "Imię i nazwisko:"
+        team_7_age: "Wiek:"
     errors:
       messages:
         record_invalid: 'Negatywne sprawdzenie poprawności: %{errors}'

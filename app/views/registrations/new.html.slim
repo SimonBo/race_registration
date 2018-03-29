@@ -7,7 +7,7 @@
         p Uzupełnij następujące pola:
         - @registration.errors.full_messages.each do |msg|
           li = msg
-  h4 1. Zgłaszam udział zespołu pn. #{ f.input_field :team_name } w #{ Registration::EVENT } „#{ Registration::NAME }” w dniu #{ Registration::DATE } roku w Sulejówku:
+  h4 1. Zgłaszam udział zespołu pn. #{ f.input_field :team_name } (nazwa zespołu) w #{ Registration::EVENT } „#{ Registration::NAME }” w dniu #{ Registration::DATE } roku w Sulejówku:
   .form_box.col-sm-8.col-sm-offset-2
     b 1. Kapitan zespołu:
     .captain_details
@@ -23,6 +23,9 @@
       p 3. Imię i nazwisko: #{ f.input_field :team_2_name }, wiek: #{ f.input_field :team_2_age }
       p 4. Imię i nazwisko: #{ f.input_field :team_3_name }, wiek: #{ f.input_field :team_3_age }
       p 5. Imię i nazwisko: #{ f.input_field :team_4_name }, wiek: #{ f.input_field :team_4_age }
+      p 6. Imię i nazwisko: #{ f.input_field :team_5_name }, wiek: #{ f.input_field :team_5_age }
+      p 7. Imię i nazwisko: #{ f.input_field :team_6_name }, wiek: #{ f.input_field :team_6_age }
+      p 8. Imię i nazwisko: #{ f.input_field :team_7_name }, wiek: #{ f.input_field :team_7_age }
 
   .row
     .col-xs-12.declaration
