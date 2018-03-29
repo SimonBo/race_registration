@@ -45,6 +45,9 @@ set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
+append :rbenv_map_bins, 'puma', 'pumactl'
+
+
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
