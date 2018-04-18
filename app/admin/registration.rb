@@ -13,9 +13,9 @@ ActiveAdmin.register Registration do
 #   permitted
 # end
 
-# action_item only: :show do
-#   link_to 'PDF', pdf_admin_registration_path(resource)
-# end
+action_item :pdf, only: :show do
+  link_to 'PDF', [:pdf, :admin, resource]
+end
 
 member_action :pdf do
   @registration = resource
