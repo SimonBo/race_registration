@@ -9,7 +9,7 @@ pl:
         age: "Wiek:"
         phone_number: "Telefon kontaktowy:"
         email: "Adres mailowy:"
-        address: "Adres zamieszkania:"
+        address: "Adres zamieszkania (kod pocztowy i miejscowość):"
         team_1_name: "Imię i nazwisko:"
         team_1_age: "Wiek:"
         team_2_name: "Imię i nazwisko:"

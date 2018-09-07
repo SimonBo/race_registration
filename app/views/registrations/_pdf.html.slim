@@ -1,5 +1,5 @@
 .container-fluid.pdf
-  = render 'reg_title'
+  = render 'registrations/reg_title'
   h4 1. Zgłaszam udział zespołu pn. #{ @registration.team_name } w #{ Registration::EVENT } „#{ Registration::NAME }” w dniu #{ Registration::DATE } roku w Sulejówku:
   .row
     .form_box.col-sm-8.col-sm-offset-2
@@ -16,7 +16,7 @@
         - (1..7).each do |nr|
           - if @registration.send("team_#{nr}_name").present?
             p #{ t('activerecord.attributes.registration.team_1_name') } #{ @registration.send("team_#{nr}_name") }, #{ t('activerecord.attributes.registration.team_1_age') } #{ @registration.send("team_#{nr}_age") }
-  = render 'declaration'
+  = render 'registrations/declaration'
 
   .row
     .col-xs-4
@@ -28,4 +28,4 @@
       br
       | podpis Kapitana Zespołu
 
-  = render 'rodo'
+  = render 'registrations/rodo'
