@@ -13,29 +13,11 @@
         br
       b style='padding: 10px 0;' Członkowie zespołu:
       .team_details
-        - if @registration.team_1_name.present?
-          p #{ t('activerecord.attributes.registration.team_1_name') } #{ @registration.team_1_name }, #{ t('activerecord.attributes.registration.team_1_age') } #{ @registration.team_1_age }
-        - if @registration.team_2_name.present?
-          p #{ t('activerecord.attributes.registration.team_2_name') } #{ @registration.team_2_name }, #{ t('activerecord.attributes.registration.team_2_age') } #{ @registration.team_2_age }
-        - if @registration.team_3_name.present?
-          p #{ t('activerecord.attributes.registration.team_3_name') } #{ @registration.team_3_name }, #{ t('activerecord.attributes.registration.team_3_age') } #{ @registration.team_3_age }
-        - if @registration.team_4_name.present?
-          p #{ t('activerecord.attributes.registration.team_4_name') } #{ @registration.team_4_name }, #{ t('activerecord.attributes.registration.team_4_age') } #{ @registration.team_4_age }
-        - if @registration.team_5_name.present?
-          p #{ t('activerecord.attributes.registration.team_5_name') } #{ @registration.team_5_name }, #{ t('activerecord.attributes.registration.team_5_age') } #{ @registration.team_5_age }
-        - if @registration.team_6_name.present?
-          p #{ t('activerecord.attributes.registration.team_6_name') } #{ @registration.team_6_name }, #{ t('activerecord.attributes.registration.team_6_age') } #{ @registration.team_6_age }
-        - if @registration.team_7_name.present?
-          p #{ t('activerecord.attributes.registration.team_7_name') } #{ @registration.team_7_name }, #{ t('activerecord.attributes.registration.team_7_age') } #{ @registration.team_7_age }
-  .row
-    .col-xs-12
-      h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
-      ol
-        li zapoznaliśmy się z Regulaminem Rajdu i zobowiązujemy się go przestrzegać;
-        li stan zdrowia pozwala nam na uczestnictwo w Rajdzie w dniu #{ Registration::DATE } r.;
-        li posiadamy niezbędną wiedzę i umiejętności poruszania się po drogach;
-        li wyrażamy zgodę na wykorzystanie i przetwarzanie naszych danych osobowych oraz naszego wizerunku w związku z organizacją Rajdu, zgodnie z ustawą z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (tekst jednolity Dz. U. z 2016 r., poz. 922);
-        li ponosimy całkowitą odpowiedzialność za bezpieczeństwo niepełnoletnich członków zespołu w trakcie trwania Rajdu w dniu #{ Registration::DATE } r.
+        - (1..7).each do |nr|
+          - if @registration.send("team_#{nr}_name").present?
+            p #{ t('activerecord.attributes.registration.team_1_name') } #{ @registration.send("team_#{nr}_name") }, #{ t('activerecord.attributes.registration.team_1_age') } #{ @registration.send("team_#{nr}_age") }
+  = render 'declaration'
+
   .row
     .col-xs-4
       | _________________________
@@ -45,3 +27,5 @@
       | _________________________
       br
       | podpis Kapitana Zespołu
+
+  = render 'rodo'

@@ -27,15 +27,9 @@
       p 7. Imię i nazwisko: #{ f.input_field :team_6_name }, wiek: #{ f.input_field :team_6_age }
       p 8. Imię i nazwisko: #{ f.input_field :team_7_name }, wiek: #{ f.input_field :team_7_age }
 
-  .row
-    .col-xs-12.declaration
-      h4 2. W imieniu wszystkich członków zespołu oświadczam, że:
+  = render 'declaration'
+  = render 'rodo'
 
-      p 1)    zapoznaliśmy się z #{ link_to 'Regulaminem', '/regulamin.doc', target: '_blank' } Rajdu i zobowiązujemy się go przestrzegać;
-      p 2)    stan zdrowia pozwala nam na uczestnictwo w Rajdzie w dniu #{ Registration::DATE } r.;
-      p 3)    posiadamy niezbędną wiedzę i umiejętności poruszania się po drogach;
-      p 4)    wyrażamy zgodę na wykorzystanie i przetwarzanie naszych danych osobowych oraz naszego wizerunku w związku z organizacją Rajdu, zgodnie z ustawą z dnia 29 sierpnia 1997 roku o ochronie danych osobowych (tekst jednolity Dz. U. z 2016 r., poz. 922);
-      p 5)    ponosimy całkowitą odpowiedzialność za bezpieczeństwo niepełnoletnich członków zespołu w trakcie trwania Rajdu w dniu #{ Registration::DATE } r.
   br
   .text-center
     = f.button :submit, 'Wyślij zgłoszenie'
