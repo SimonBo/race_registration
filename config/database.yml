@@ -10,6 +10,9 @@ default: &default
 development:
   <<: *default
   database: race_registration_development
+  password: szymon666
+  username: postgres
+  host: localhost
 
 
 test:
