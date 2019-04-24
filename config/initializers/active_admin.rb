@@ -1,5 +1,7 @@
 class ActiveAdmin::BaseController
-  http_basic_authenticate_with :name =>  ENV["AA_LOGIN"], :password =>  ENV["AA_PASS"]
+  if Rails.env.production?
+    http_basic_authenticate_with :name =>  ENV["AA_LOGIN"], :password =>  ENV["AA_PASS"]
+  end
 end
 
 ActiveAdmin.setup do |config|
