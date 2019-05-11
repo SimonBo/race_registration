@@ -1,35 +1,38 @@
-.container-fluid.new_registration
-  = render 'reg_title'
-= simple_form_for @registration, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
-  - if @registration.errors.any?
-    #error_messages_box.bg-danger
-      ol
-        p Uzupełnij następujące pola:
-        - @registration.errors.full_messages.each do |msg|
-          li = msg
-  h4 1. Zgłaszam udział zespołu pn. #{ f.input_field :team_name } (nazwa zespołu) w #{ Registration::EVENT } „#{ Registration::NAME }” w dniu #{ Registration::DATE } roku w Sulejówku:
-  .form_box.col-sm-8.col-sm-offset-2
-    b 1. Kapitan zespołu:
-    .captain_details
-      = f.input :name
-      = f.input :age
-      = f.input :phone_number
-      = f.input :email
-      = f.input :address
-      br
-    b style='padding: 10px 0;' Członkowie zespołu:
-    .team_details
-      p 2. Imię i nazwisko: #{ f.input_field :team_1_name }, wiek: #{ f.input_field :team_1_age }
-      p 3. Imię i nazwisko: #{ f.input_field :team_2_name }, wiek: #{ f.input_field :team_2_age }
-      p 4. Imię i nazwisko: #{ f.input_field :team_3_name }, wiek: #{ f.input_field :team_3_age }
-      p 5. Imię i nazwisko: #{ f.input_field :team_4_name }, wiek: #{ f.input_field :team_4_age }
-      p 6. Imię i nazwisko: #{ f.input_field :team_5_name }, wiek: #{ f.input_field :team_5_age }
-      p 7. Imię i nazwisko: #{ f.input_field :team_6_name }, wiek: #{ f.input_field :team_6_age }
-      p 8. Imię i nazwisko: #{ f.input_field :team_7_name }, wiek: #{ f.input_field :team_7_age }
+- if ENV['DISABLE_REG'].present?
+  h1 Rejestracja uczestników IX Rajdu Rowerowego została zakończona.
+- else
+  .container-fluid.new_registration
+    = render 'reg_title'
+  = simple_form_for @registration, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+    - if @registration.errors.any?
+      #error_messages_box.bg-danger
+        ol
+          p Uzupełnij następujące pola:
+          - @registration.errors.full_messages.each do |msg|
+            li = msg
+    h4 1. Zgłaszam udział zespołu pn. #{ f.input_field :team_name } (nazwa zespołu) w #{ Registration::EVENT } „#{ Registration::NAME }” w dniu #{ Registration::DATE } roku w Sulejówku:
+    .form_box.col-sm-8.col-sm-offset-2
+      b 1. Kapitan zespołu:
+      .captain_details
+        = f.input :name
+        = f.input :age
+        = f.input :phone_number
+        = f.input :email
+        = f.input :address
+        br
+      b style='padding: 10px 0;' Członkowie zespołu:
+      .team_details
+        p 2. Imię i nazwisko: #{ f.input_field :team_1_name }, wiek: #{ f.input_field :team_1_age }
+        p 3. Imię i nazwisko: #{ f.input_field :team_2_name }, wiek: #{ f.input_field :team_2_age }
+        p 4. Imię i nazwisko: #{ f.input_field :team_3_name }, wiek: #{ f.input_field :team_3_age }
+        p 5. Imię i nazwisko: #{ f.input_field :team_4_name }, wiek: #{ f.input_field :team_4_age }
+        p 6. Imię i nazwisko: #{ f.input_field :team_5_name }, wiek: #{ f.input_field :team_5_age }
+        p 7. Imię i nazwisko: #{ f.input_field :team_6_name }, wiek: #{ f.input_field :team_6_age }
+        p 8. Imię i nazwisko: #{ f.input_field :team_7_name }, wiek: #{ f.input_field :team_7_age }
 
-  = render 'declaration'
-  = render 'rodo'
+    = render 'declaration'
+    = render 'rodo'
 
-  br
-  .text-center
-    = f.button :submit, 'Wyślij zgłoszenie'
+    br
+    .text-center
+      = f.button :submit, 'Wyślij zgłoszenie'
