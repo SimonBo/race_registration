@@ -2,13 +2,13 @@ class Registration < ApplicationRecord
   validates :name, :age, :phone_number, :email, :address, :team_name, presence: true
   before_save :ensure_token
 
-  EVENT = "IX Rajdzie Rowerowym"
-  NAME = 'Na wiosennym szlaku'
-  DATE = '19 maja 2019'
+  EVENT = "X Rajdzie Rowerowym"
+  NAME = 'Na jesiennym szlaku'
+  DATE = '6 października 2019'
 
   def ensure_token
     if token.blank?
-    self.token = generate_token
+      self.token = generate_token
     end
   end
 
